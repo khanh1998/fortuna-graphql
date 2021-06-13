@@ -1,0 +1,9 @@
+type Asset {
+	id: ID
+	name: String
+	code: String
+	description: String
+	unit: String
+	createdAt: String
+	updatedAt: String
+}

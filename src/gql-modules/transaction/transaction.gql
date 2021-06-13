@@ -1,0 +1,34 @@
+type Transaction {
+	id: ID
+	userId: ID
+	assetId: ID
+	prevTransactionId: ID
+	description: String
+	amount: Int
+	total: Int
+	asset: Asset
+	prev: TransactionShort
+	createdAt: String
+	updatedAt: String
+}
+
+input TransactionInput {
+	description: String
+	amount: Int
+	total: Int
+	userId: ID
+	assetId: ID
+	prevTransactionId: ID
+}
+
+type TransactionShort {
+	id: ID
+	description: String
+	amount: Int
+	total: Int
+	userId: ID
+	assetId: ID
+	prevTransactionId: ID
+	createdAt: String
+	updatedAt: String
+}

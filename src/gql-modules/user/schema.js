@@ -1,30 +1,16 @@
-import { gql } from "apollo-server";
+import { gql } from 'apollo-server';
+import { readFileSync } from 'fs';
+import path from 'path';
 
+const schemaString = readFileSync(path.join(__dirname, 'user.gql'), {
+  encoding: 'utf-8',
+}).toString();
 export const userSchema = gql`
-  type User {
-    id: ID
-    username: String
-    name: String
-    avatar: String
-    email: String
-    phone: String
-    language: String
-    currency: String
-  }
+  ${schemaString}
   type Query {
     User(id: ID!): User
   }
-  input UserInput {
-    username: String
-    name: String
-    avatar: String
-    email: String
-    phone: String
-    language: String
-    currency: String
-    password: String
-  }
   type Mutation {
-    createUser(user: UserInput) : User
+    createUser(user: UserInput): User
   }
 `;

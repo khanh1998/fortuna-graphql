@@ -1,6 +1,7 @@
-import { UserModule } from "./user";
-import { createApplication } from "graphql-modules";
+import { UserModule } from './user';
+import { TransactionModule } from './transaction';
+import { createApplication } from 'graphql-modules';
 
 export const application = createApplication({
-	modules: [UserModule],
-})
+  modules: [UserModule, TransactionModule],
+});
