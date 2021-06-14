@@ -5,13 +5,8 @@ export const transactionResolver = {
     },
   },
   Mutation: {
-    createTransaction: (root, { id }, { dataSources }) => {
-      return null;
+    createTransaction: (root, { input }, { dataSources }) => {
+      return dataSources.fortunaAPI.postTransaction({ ...input });
     },
   },
-  Transaction: {
-    id(transaction) {
-      return transaction.id
-    }
-  }
 };

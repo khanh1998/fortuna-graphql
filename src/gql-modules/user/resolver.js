@@ -6,7 +6,7 @@ export const UserResolver = {
   },
   Mutation: {
     createUser: async (root, { user }, { dataSources }) => {
-      return dataSources.fortunaAPI.postUser(user);
+      return dataSources.fortunaAPI.postUser({ ...user });
     },
   },
 };
