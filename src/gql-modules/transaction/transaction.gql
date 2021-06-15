@@ -1,8 +1,5 @@
 type Transaction {
 	id: ID
-	userId: ID
-	assetId: ID
-	prevTransactionId: ID
 	description: String
 	amount: Int
 	total: Int
@@ -16,9 +13,9 @@ input TransactionInput {
 	description: String
 	amount: Int
 	total: Int
-	userId: ID
-	assetId: ID
-	prevTransactionId: ID
+	user: ID
+	asset: ID
+	prev: ID
 }
 
 type TransactionShort {
@@ -26,9 +23,9 @@ type TransactionShort {
 	description: String
 	amount: Int
 	total: Int
-	userId: ID
-	assetId: ID
-	prevTransactionId: ID
+	user: ID
+	asset: ID
+	prev: ID
 	createdAt: String
 	updatedAt: String
 }
