@@ -23,4 +23,5 @@ input UserInput {
   language: String
   currency: String
   password: String
+  assets: [ID]
 }

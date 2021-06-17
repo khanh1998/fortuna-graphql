@@ -14,11 +14,20 @@ export class FortunaAPI extends RESTDataSource {
     return this.post('user', user);
   }
 
+  async putUser(user) {
+    const { username } = user;
+    return this.put(`user/${username}`, user);
+  }
+
   async getTransactions(username) {
     return this.get(`transaction`);
   }
 
   async postTransaction(transactionInput) {
-    return this.post('transaction', transactionInput)
+    return this.post('transaction', transactionInput);
+  }
+
+  async getAssets() {
+    return this.get('asset');
   }
 }

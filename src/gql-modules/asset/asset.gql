@@ -7,3 +7,12 @@ type Asset {
 	createdAt: String
 	updatedAt: String
 }
+input AssetInput {
+	id: ID
+	name: String
+	code: String
+	description: String
+	unit: String
+	createdAt: String
+	updatedAt: String
+}

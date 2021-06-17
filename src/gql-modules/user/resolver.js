@@ -8,5 +8,8 @@ export const UserResolver = {
     createUser: async (root, { user }, { dataSources }) => {
       return dataSources.fortunaAPI.postUser({ ...user });
     },
+    updateUser: async (root, { user }, { dataSources }) => {
+      return dataSources.fortunaAPI.putUser({ ...user });
+    },
   },
 };

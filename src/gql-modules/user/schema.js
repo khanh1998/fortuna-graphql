@@ -12,5 +12,6 @@ export const userSchema = gql`
   }
   type Mutation {
     createUser(user: UserInput): User
+    updateUser(user: UserInput): User
   }
 `;
