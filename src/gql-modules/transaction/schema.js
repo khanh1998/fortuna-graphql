@@ -23,7 +23,7 @@ export const schema = gql`
   ${transactionSchemaString}
 
   extend type Query {
-    getTransactionsByUser(username: String): [Transaction]
+    Transactions(user: ID, asset: ID): [Transaction]
   }
 
   extend type Mutation {
