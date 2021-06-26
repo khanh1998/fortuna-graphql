@@ -1,7 +1,7 @@
 export const UserResolver = {
   Query: {
-    User: async (root, { id }, { dataSources }) => {
-      return dataSources.fortunaAPI.getUser(id);
+    User: async (root, {}, { dataSources }) => {
+      return dataSources.fortunaAPI.getUser();
     },
   },
   Mutation: {

@@ -1,7 +1,7 @@
 export const transactionResolver = {
   Query: {
-    Transactions: async (root, { user, asset }, { dataSources }) => {
-      return dataSources.fortunaAPI.getTransactions(user, asset);
+    Transactions: async (root, { asset }, { dataSources }) => {
+      return dataSources.fortunaAPI.getTransactions(asset);
     },
   },
   Mutation: {
