@@ -10,9 +10,11 @@ const server = new ApolloServer({
       fortunaAPI: new FortunaAPI(),
     };
   },
-  context: () => {
+  context: ({ req }) => {
+    const token = req.headers.authorization || '';
+    console.log(token);
     return {
-      token: 'it is a token',
+      token,
     };
   },
 });

@@ -5,6 +5,9 @@ export class FortunaAPI extends RESTDataSource {
     super();
     this.baseURL = process.env.DATASOURCE;
   }
+  willSendRequest(request) {
+    request.headers.set('Authorization', `${this.context.token}`);
+  }
 
   async getUser(username) {
     return this.get(`user/${username}`);
