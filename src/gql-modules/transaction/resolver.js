@@ -8,5 +8,8 @@ export const transactionResolver = {
     createTransaction: (root, { input }, { dataSources }) => {
       return dataSources.fortunaAPI.postTransaction({ ...input });
     },
+    updateTransaction: (root, { id, input }, { dataSources }) => {
+      return dataSources.fortunaAPI.putTransaction(id, { ...input })
+    }
   },
 };

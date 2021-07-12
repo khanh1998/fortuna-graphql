@@ -27,5 +27,6 @@ export const schema = gql`
 
   extend type Mutation {
     createTransaction(input: TransactionInput): Transaction
+    updateTransaction(id: ID, input: TransactionUpdate): Transaction
   }
 `;

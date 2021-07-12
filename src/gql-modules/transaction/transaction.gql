@@ -19,3 +19,9 @@ input TransactionInput {
 	asset: ID
 	type: TYPE
 }
+
+input TransactionUpdate {
+	description: String
+	amount: Int
+	type: TYPE
+}
