@@ -8,7 +8,7 @@ const schemaString = readFileSync(path.join(__dirname, 'user.gql'), {
 export const userSchema = gql`
   ${schemaString}
   type Query {
-    User: User
+    user: User
   }
   type Mutation {
     createUser(user: UserInput): User

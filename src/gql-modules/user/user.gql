@@ -7,12 +7,6 @@ type User {
   phone: String
   language: String
   currency: String
-  assets: [Asset]
-  lastestTransactions: [Transaction]
-}
-type MapTransaction {
-  key: String
-  value: Transaction
 }
 input UserInput {
   username: String
@@ -23,5 +17,4 @@ input UserInput {
   language: String
   currency: String
   password: String
-  assets: [ID]
 }

@@ -2,30 +2,20 @@ type Transaction {
 	id: ID
 	description: String
 	amount: Int
-	total: Int
-	asset: Asset
-	prev: TransactionShort
+	asset: ID
+	ref: ID
 	createdAt: String
 	updatedAt: String
+}
+enum TYPE {
+	CREDIT
+  DEBIT
+	TRANSFER
 }
 
 input TransactionInput {
 	description: String
 	amount: Int
-	total: Int
-	user: ID
 	asset: ID
-	prev: ID
-}
-
-type TransactionShort {
-	id: ID
-	description: String
-	amount: Int
-	total: Int
-	user: ID
-	asset: ID
-	prev: ID
-	createdAt: String
-	updatedAt: String
+	type: TYPE
 }

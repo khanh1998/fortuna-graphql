@@ -1,0 +1,10 @@
+type AssetGroup {
+	id: ID
+	name: String
+	createdAt: String
+	updatedAt: String
+}
+
+input AssetGroupInput {
+	name: String
+}

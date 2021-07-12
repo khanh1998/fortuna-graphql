@@ -7,7 +7,13 @@ const assetSchema = readFileSync(path.join(__dirname, 'asset.gql'), {
 });
 
 export const schema = gql`
+  ${assetSchema}
+
   extend type Query {
-    Assets: [Asset]
+    assets: [Asset]
+  }
+  extend type Mutation {
+    createAsset(input: AssetInput): Asset
+    updateAsset(id: ID, input: AssetInput): Asset
   }
 `;

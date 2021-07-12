@@ -19,11 +19,10 @@ const assetSchemaString = readFileSync(
   }
 ).toString();
 export const schema = gql`
-  ${assetSchemaString}
   ${transactionSchemaString}
 
   extend type Query {
-    Transactions(asset: ID): [Transaction]
+    transactions(asset: ID): [Transaction]
   }
 
   extend type Mutation {

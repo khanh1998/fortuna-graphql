@@ -4,15 +4,17 @@ type Asset {
 	code: String
 	description: String
 	unit: String
+	group: ID
+	amount: Int
 	createdAt: String
 	updatedAt: String
 }
+
 input AssetInput {
-	id: ID
 	name: String
 	code: String
 	description: String
 	unit: String
-	createdAt: String
-	updatedAt: String
+	group: ID
+	amount: Int
 }

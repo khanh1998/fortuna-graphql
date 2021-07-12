@@ -9,7 +9,7 @@ export class FortunaAPI extends RESTDataSource {
     request.headers.set('Authorization', `${this.context.token}`);
   }
 
-  async getUser(username) {
+  async getUser() {
     return this.get(`user`);
   }
 
@@ -18,7 +18,6 @@ export class FortunaAPI extends RESTDataSource {
   }
 
   async putUser(user) {
-    const { username } = user;
     return this.put(`user`, user);
   }
 
@@ -32,5 +31,29 @@ export class FortunaAPI extends RESTDataSource {
 
   async getAssets() {
     return this.get('asset');
+  }
+
+  async putAsset(id, input) {
+    return this.put(`asset/${id}`, input);
+  }
+
+  async postAsset(assetInput) {
+    return this.post('asset', assetInput);
+  }
+
+  async getAssetGroups() {
+    return this.get('asset-group');
+  }
+
+  async postAssetGroup(input) {
+    return this.post('asset-group', input);
+  }
+
+  async putAssetGroup(id, input) {
+    return this.put(`asset-group/${id}`, input);
+  }
+
+  async deleteAssetGroup(id) {
+    return this.delete(`asset-group/${id}`);
   }
 }
